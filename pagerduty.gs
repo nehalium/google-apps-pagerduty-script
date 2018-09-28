@@ -86,7 +86,6 @@ var PagerDuty = (function() {
     query += '&offset=' + offset;
     query += '&sort_by=created_at:ASC';
     query += '&time_zone=UTC';
-    Logger.log(query);
     return query;
   }
 })()
