@@ -20,6 +20,7 @@ var Appender = (function() {
   function buildTable(items) {
     var values = [];
     var row = [];
+    var timeStamp = getTimestamp();
     for (var i=0; i<items.length; i++) {
       row = [];
       row.push(items[i].incident_number); // #
@@ -48,7 +49,7 @@ var Appender = (function() {
       row.push(items[i].status); // Status
       row.push(items[i].alert_counts.triggered); // Alerts Triggered
       row.push(items[i].alert_counts.resolved); // Alerts Resolved
-      row.push(getTimestamp()); // Timestamp
+      row.push(timeStamp); // Timestamp
       values.push(row);
     }
     return values;
